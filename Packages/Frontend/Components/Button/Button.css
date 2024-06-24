@@ -1,0 +1,33 @@
+@layer init {
+    :host(:hover) .circle {
+        height: 100px;
+        width:  100px;
+    }
+
+    .circle {
+        grid-area: 1 / 1 / 1 / 1;
+        border-radius: 100%;
+        height: 1px;
+        width:  1px;
+        background: #CF2B7A;
+        margin: auto;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .image {
+        grid-area: 1 / 1 / 1 / 1;
+        height: 100px;
+        width:  100px;
+        display: block;
+        margin: auto;
+        cursor: pointer;
+    }
+
+    .root {
+        height: 100px;
+        width:  100px;
+        margin: auto;
+        display: grid;
+    }
+}

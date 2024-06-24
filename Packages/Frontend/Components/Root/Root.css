@@ -1,33 +1,3 @@
 @layer init {
-    .button_start {
-        height: 100px;
-        width:  100px;
-        margin: auto;
-        display: grid;
-    }
 
-    .button_start__image {
-        grid-area: 1 / 1 / 1 / 1;
-        height: 100px;
-        width:  100px;
-        display: block;
-        margin: auto;
-        cursor: pointer;
-    }
-
-    .button_start__circle {
-        grid-area: 1 / 1 / 1 / 1;
-        border-radius: 100%;
-        height: 1px;
-        width:  1px;
-        background: #CF2B7A;
-        margin: auto;
-        transition: all 0.3s ease-in-out;
-        cursor: pointer;
-    }
-
-    .button_start:hover .button_start__circle {
-        height: 100px;
-        width:  100px;
-    }
 }
