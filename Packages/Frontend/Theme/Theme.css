@@ -1,0 +1,48 @@
+@layer init {
+    :not(:defined) {
+        display: none;
+    }
+
+    :root {
+        /* --_Theme__font_lineHeight: calc(var(--Theme__font_size) * var(--Theme__font_lineHeight)); */
+
+
+        /* --Theme__accent_hue: 180; */
+        /* --Theme__background: hsl(var(--Theme__hue), 5%, 20%); */
+        /* --Theme__block__background: hsl(var(--Theme__hue), 10%, 30%); */
+        /* --Theme__block__background_accent: hsl(var(--Theme__accent_hue), 30%, 30%); */
+        /* --Theme__block__background_light: hsl(var(--Theme__hue), 10%, 50%); */
+        /* --Theme__block__gap: 8px; */
+        /* --Theme__block__gap_double: calc(var(--Theme__block__gap) * 2); */
+        /* --Theme__block__radius: 8px; */
+        /* --Theme__button__background: hsl(var(--Theme__hue), 15%, 30%); */
+        /* --Theme__button__background_accent: hsl(var(--Theme__accent_hue), 40%, 40%); */
+        /* --Theme__button__foreground: hsl(var(--Theme__accent_hue), 60%, 60%); */
+        /* --Theme__edge__width: 16px; */
+        /* --Theme__font: var(--Theme__font_size) / var(--Theme__font_lineHeight) var(--Theme__font_family); */
+        /* --Theme__font_family: 'Arial'; */
+        /* --Theme__font_lineHeight: 1.5; */
+        /* --Theme__font_size: 16px; */
+        /* --Theme__foreground: #fff; */
+        /* --Theme__foreground_accent_dim: hsl(var(--Theme__accent_hue), 80%, 80%); */
+        /* --Theme__foreground_dim: hsl(var(--Theme__hue), 10%, 60%); */
+        /* --Theme__ghost_transition: opacity 0.6s ease-out; */
+        /* --Theme__hue: 200; */
+        /* --Theme__selection: hsl(var(--Theme__accent_hue), 50%, 50%); */
+        /* --Theme__shadow: #0004; */
+
+        /* background: var(--Theme__background); */
+        /* color: var(--Theme__foreground); */
+        /* font: var(--Theme__font); */
+        /* overflow: hidden; */
+    }
+
+
+    body {
+        margin: 0;
+    }
+
+    [_building] {
+        visibility: hidden;
+    }
+}
