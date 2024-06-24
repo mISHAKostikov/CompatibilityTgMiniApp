@@ -9,16 +9,16 @@
         width:  100dvw;
     }
 
+    .label {
+        background: #cf2b7a;
+        color: #fff;
+        font-family: 'mv-weekend';
+        font-size: 24px;
+        text-align: center;
+    }
+
     .root {
         display: grid;
         grid-template-rows: 5dvh 1fr 2fr 1fr;
-    }
-
-    .label {
-        background: #CF2B7A;
-        font-size: 24px;
-        text-align: center;
-        font-family: 'mv-weekend';
-        color: #FFFFFF;
     }
 }

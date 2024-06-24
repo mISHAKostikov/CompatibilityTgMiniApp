@@ -5,29 +5,29 @@
     }
 
     .circle {
-        grid-area: 1 / 1 / 1 / 1;
+        background: #cf2b7a;
         border-radius: 100%;
+        cursor: pointer;
+        grid-area: 1 / 1 / 1 / 1;
         height: 1px;
-        width:  1px;
-        background: #CF2B7A;
         margin: auto;
         transition: all 0.3s ease-in-out;
-        cursor: pointer;
+        width:  1px;
     }
 
     .image {
+        cursor: pointer;
+        display: block;
         grid-area: 1 / 1 / 1 / 1;
         height: 100px;
-        width:  100px;
-        display: block;
         margin: auto;
-        cursor: pointer;
+        width:  100px;
     }
 
     .root {
-        height: 100px;
-        width:  100px;
-        margin: auto;
         display: grid;
+        height: 100px;
+        margin: auto;
+        width:  100px;
     }
 }
