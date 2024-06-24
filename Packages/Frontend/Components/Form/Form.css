@@ -19,6 +19,7 @@
 
     .root {
         display: grid;
-        grid-template-rows: 5dvh 1fr 2fr 1fr;
+        grid-gap: 30px;
+        grid-template-rows: auto 1fr 2fr 1fr;
     }
 }

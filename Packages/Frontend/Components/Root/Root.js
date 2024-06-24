@@ -1,3 +1,4 @@
+import {Button} from '../Button/Button.js';
 import {Component} from '../../Api/Components/Component/Component.js';
 import {Form} from '../Form/Form.js';
 import {Leafable} from '../../Api/Components/Leafable/Leafable.js';

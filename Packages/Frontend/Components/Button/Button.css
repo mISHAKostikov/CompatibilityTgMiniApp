@@ -1,3 +1,7 @@
+@layer init;
+
+@import '../../Theme/Theme.css' layer(theme);
+
 @layer init {
     :host(:hover) .circle {
         height: 100px;
