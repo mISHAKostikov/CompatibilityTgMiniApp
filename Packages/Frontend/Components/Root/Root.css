@@ -1,0 +1,10 @@
+@layer init {
+    .button_start {
+        /* background: #2C2D41; */
+        height: 100px;
+        width:  100px;
+        border-radius: 100%;
+        border: 10px #CF2B7A solid;
+        box-sizing: border-box;
+    }
+}
