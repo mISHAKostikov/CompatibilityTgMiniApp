@@ -9,17 +9,39 @@
         width:  100dvw;
     }
 
-    .label {
-        background: #cf2b7a;
-        color: #fff;
+    .button {
+        height: 25dvh;
+        width: 25dvh;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .input {
+        background: #8485A0;
+        border-radius: 12px;
+        color: #FFFFFF;
         font-family: 'mv-weekend';
         font-size: 24px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 55dvw;
+    }
+
+    .label {
+        background: #CF2B7A;
+        color: #FFFFFF;
+        font-family: 'mv-weekend';
+        font-size: 36px;
+        margin-top: -10px;
         text-align: center;
     }
 
     .root {
         display: grid;
-        grid-gap: 30px;
-        grid-template-rows: auto 1fr 2fr 1fr;
+        grid-gap: 15dvh;
+        grid-template-rows: 5dvh 0dvh 20dvh 0dvh;
+        height: inherit;
     }
 }

@@ -10,6 +10,7 @@
 
     .circle {
         background: #cf2b7a;
+        border: 40px #cf2b7a solid;
         border-radius: 100%;
         cursor: pointer;
         grid-area: 1 / 1 / 1 / 1;
