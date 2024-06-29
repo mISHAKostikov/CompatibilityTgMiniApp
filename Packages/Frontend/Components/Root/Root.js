@@ -6,11 +6,36 @@ import {ResultPage} from '../ResultPage/ResultPage.js';
 
 
 export class Root extends Component {
+    static _elements = {
+        button__start: '',
+        form__page: '',
+        leafable: '',
+        result__page: '',
+    };
+
+
     static css_url = true;
     static html_url = true;
     static url = import.meta.url;
 
+
     static {
         this.define();
     }
+
+
+    _eventListeners__define() {
+        // this.eventListeners__add({
+        //     pointerdown: this._on_pointerDown,
+        //     animationend: this._on_transitionEnd,
+        // });
+
+        this._elements.button__start.addEventListener('pointerdown', this._button__start__on_pointerDown.bind(this));
+    }
+
+    async _button__start__on_pointerDown() {
+        await this._elements.button__start._promise;
+        this._elements.leafable.index++;
+    }
+
 }

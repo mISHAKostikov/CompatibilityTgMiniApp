@@ -16,19 +16,6 @@
         margin-right: auto;
     }
 
-    .input {
-        background: #8485A0;
-        border-radius: 12px;
-        color: #FFFFFF;
-        font-family: 'mv-weekend';
-        font-size: 24px;
-        height: 40px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-        width: 55dvw;
-    }
-
     .label {
         background: #CF2B7A;
         color: #FFFFFF;
@@ -43,5 +30,11 @@
         grid-gap: 15dvh;
         grid-template-rows: 5dvh 0dvh 20dvh 0dvh;
         height: inherit;
+    }
+
+    x-edit {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
     }
 }

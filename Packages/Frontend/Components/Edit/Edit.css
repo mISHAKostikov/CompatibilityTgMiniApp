@@ -1,0 +1,22 @@
+@layer init {
+    :hosr {
+        display: inline-block;
+    }
+
+    .root {
+        display: contents;
+    }
+
+    .input {
+        background: #8485A0;
+        border-radius: 12px;
+        color: #FFFFFF;
+        font-family: 'mv-weekend';
+        font-size: 24px;
+        height: 40px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        width: 55dvw;
+    }
+}
