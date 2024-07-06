@@ -25,11 +25,6 @@ export class Root extends Component {
 
 
     _eventListeners__define() {
-        // this.eventListeners__add({
-        //     pointerdown: this._on_pointerDown,
-        //     animationend: this._on_transitionEnd,
-        // });
-
         this._elements.button__start.addEventListener('pointerdown', this._button__start__on_pointerDown.bind(this));
     }
 

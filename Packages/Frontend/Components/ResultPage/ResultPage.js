@@ -1,4 +1,5 @@
 import {Component} from '../../Api/Components/Component/Component.js';
+import {Pie} from '../Pie/Pie.js';
 
 
 export class ResultPage extends Component {
