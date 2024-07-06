@@ -31,6 +31,7 @@ export class Root extends Component {
 
     _eventListeners__define() {
         this._elements.button__start.addEventListener('pointerdown', this._button__start__on_pointerDown.bind(this));
+        this._elements.form__page._elements.buttonCalculate.addEventListener('pointerdown', this._form__page__on_pointerDown.bind(this));
     }
 
     _button__calc__on_pointerDown() {
@@ -42,6 +43,7 @@ export class Root extends Component {
         this._elements.leafable.index++;
     }
 
+<<<<<<< Updated upstream
     async _result__define() {
         let result = await this._result__receive();
 
@@ -56,4 +58,11 @@ export class Root extends Component {
 
         return data;
     }
+=======
+    async _form__page__on_pointerDown() {
+        await this._elements.form__page._elements.buttonCalculate._promise;
+        this._elements.leafable.index++;
+    }
+
+>>>>>>> Stashed changes
 }

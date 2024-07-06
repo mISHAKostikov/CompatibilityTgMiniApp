@@ -12,6 +12,7 @@
     .button {
         /* aspect-ratio: 1; */
         height: 25dvh;
+<<<<<<< Updated upstream
         justify-self: center;
     }
 
@@ -19,18 +20,41 @@
         background: var(--Theme__block__background_accent);
         font-size: 26px;
         height: fit-content;
+=======
+        width: 25dvh;
+        margin: auto;
+    }
+
+    .label {
+        background: #CF2B7A;
+        color: #FFFFFF;
+        font-family: 'mv-weekend';
+        font-size: 36px;
+>>>>>>> Stashed changes
         text-align: center;
+        height: 56px;
+        padding: 5px;
     }
 
     .root {
         align-content: start;
         align-items: center;
         display: grid;
+<<<<<<< Updated upstream
         grid-gap: 10dvh;
         grid-template-rows: auto 1fr 2fr 1fr;
     }
 
     x-edit {
+=======
+        grid-gap: 15dvh;
+        grid-template-rows: 0dvh 0dvh 20dvh 0dvh;
+        height: inherit;
+    }
+
+    x-edit {
+        margin: auto;
+>>>>>>> Stashed changes
         text-align: center;
     }
 }

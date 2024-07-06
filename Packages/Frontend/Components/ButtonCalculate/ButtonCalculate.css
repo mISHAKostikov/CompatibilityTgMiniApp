@@ -1,0 +1,42 @@
+@layer init;
+
+@import '../../Theme/Theme.css' layer(theme);
+
+@layer init {
+    :host([_animation]) {
+        .image {
+            animation: animation__image 1.7s ease;
+        }
+    }
+
+    .image {
+        cursor: pointer;
+        display: block;
+        grid-area: 1 / 1 / 1 / 1;
+        margin: auto;
+        width:  100px;
+    }
+
+    .root {
+        display: grid;
+        margin: auto;
+    }
+
+    @keyframes animation__image {
+        25% {
+            width: 120px;
+        }
+
+        50% {
+            width: 100px;
+        }
+
+        75% {
+            width: 125px;
+        }
+
+        100% {
+            width: 1px;
+        }
+    }
+}
