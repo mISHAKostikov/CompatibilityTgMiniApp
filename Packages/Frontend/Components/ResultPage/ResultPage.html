@@ -1,11 +1,9 @@
 <div class='root'>
-   <x-pie progress='80'></x-pie>
-   <x-pie progress='44'></x-pie>
-   <x-pie progress='15'></x-pie>
-   <x-pie progress='26'></x-pie>
-   <x-pie progress='99'></x-pie>
-   <x-pie progress='34'></x-pie>
-   <x-pie progress='75'></x-pie>
-   <x-pie progress='50'></x-pie>
-   <x-pie progress='100'></x-pie>
+    <x-flickable class='display' part='display'  scrollBars='phantom'>
+        <x-repeater class='repeater' interpolation='repeater'>
+            <template Repeater__delegate>
+                <x-pie class='pie Theme__ghost'></x-pie>
+            </template>
+        </x-repeater>
+    </x-flickable>
 </div>

@@ -3,6 +3,39 @@
 @import '../../Theme/Theme.css' layer(theme);
 
 @layer init {
+    :host {
+        --PesultPage__gap: 8px;
+
+        display: block;
+    }
+
+
+    .display {
+        --Flickable__scrollBar__width: var(--PesultPage__gap);
+        overflow: hidden;
+
+        &::part(content) {
+            align-content: end;
+            display: grid;
+            gap: var(--PesultPage__gap);
+            grid-template-columns: 100%;
+            justify-content: center;
+            justify-items: center;
+            min-height: 100%;
+            padding: var(--PesultPage__gap);
+            padding-right: calc(var(--PesultPage__gap) * 2);
+        }
+    }
+
+    .repeater {
+        display: contents;
+    }
+
+    .root {
+        height: 100%;
+    }
+
+
     x-pie {
         --main-color: var(--Theme__block__background_accent);
         --background: var(--Theme__block__background);
