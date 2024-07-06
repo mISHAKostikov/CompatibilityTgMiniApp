@@ -37,8 +37,9 @@
 
 
     x-pie {
-        --main-color: var(--Theme__block__background_accent);
         --background: var(--Theme__block__background);
+        --diametre: var(--Theme__diameter_circle);
+        --main-color: var(--Theme__block__background_accent);
     }
 }
 

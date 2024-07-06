@@ -3,6 +3,10 @@
 @import '../../Theme/Theme.css' layer(theme);
 
 @layer init {
+    :host {
+        display: inline-block;
+    }
+
     :host([_animation]) {
         .circle {
             animation: animation__circle 1.7s ease;
@@ -14,49 +18,42 @@
     }
 
     .circle {
-        border: 15px solid #cf2b7a;
+        aspect-ratio: 1;
+        border: 15px solid var(--Theme__block__background_accent);
         border-radius: 100%;
         cursor: pointer;
-        grid-area: 1 / 1 / 1 / 1;
-        height: 150px;
-        width: 150px;
-        margin: auto;
+        grid-area: 1 / 1;
+        height: var(--Theme__diameter_circle);
     }
 
     .image {
         cursor: pointer;
-        display: block;
-        grid-area: 1 / 1 / 1 / 1;
-        margin: auto;
+        grid-area: 1 / 1;
         width:  100px;
     }
 
     .root {
-        display: grid;
-        margin: auto;
+        align-items: center;
+        display: inline-grid;
+        justify-items: center;
     }
+
 
     @keyframes animation__circle {
         25% {
-            border: 5px solid #cf2b7a;
-            height: 150px;
-            width: 150px;
+            border-size: 5px;
         }
 
         50% {
-            border: 15px solid #cf2b7a;
-            height: 150px;
-            width: 150px;
+            border-size: 15px;
         }
 
         75% {
-            border: 5px solid #cf2b7a;
-            height: 150px;
-            width: 150px;
+            border-size: 5px;
+            height: var(--Theme__diameter_circle);
         }
 
         100% {
-            width: 1px;
             height: 1px;
         }
     }

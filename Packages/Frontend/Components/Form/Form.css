@@ -5,36 +5,34 @@
 
 @layer init {
     :host {
+        display: block;
         height: 100dvh;
         width:  100dvw;
     }
 
     .button {
+        /* aspect-ratio: 1; */
         height: 25dvh;
-        width: 25dvh;
-        margin-left: auto;
-        margin-right: auto;
+        justify-self: center;
     }
 
     .label {
-        background: #CF2B7A;
-        color: #FFFFFF;
+        background: var(--Theme__block__background_accent);
         font-family: 'mv-weekend';
         font-size: 36px;
-        margin-top: -10px;
+        height: fit-content;
         text-align: center;
     }
 
     .root {
+        align-content: start;
+        align-items: center;
         display: grid;
-        grid-gap: 15dvh;
-        grid-template-rows: 5dvh 0dvh 20dvh 0dvh;
-        height: inherit;
+        grid-gap: 10dvh;
+        grid-template-rows: auto 1fr 2fr 1fr;
     }
 
     x-edit {
-        margin-left: auto;
-        margin-right: auto;
         text-align: center;
     }
 }

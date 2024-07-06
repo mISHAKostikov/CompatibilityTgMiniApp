@@ -1,3 +1,7 @@
+@layer init;
+
+@import '../../Theme/Theme.css' layer(theme);
+
 @layer init {
     :hosr {
         display: inline-block;
@@ -8,14 +12,11 @@
     }
 
     .input {
-        background: #8485A0;
+        background: var(--Theme__block__background_light);
         border-radius: 12px;
-        color: #FFFFFF;
-        font-family: 'mv-weekend';
-        font-size: 24px;
+        color: var(--Theme__foreground);
+        font: var(--Theme__font);
         height: 40px;
-        margin-left: auto;
-        margin-right: auto;
         text-align: center;
         width: 55dvw;
     }

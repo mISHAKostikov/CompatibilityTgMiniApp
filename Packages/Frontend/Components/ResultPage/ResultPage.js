@@ -43,7 +43,7 @@ export class ResultPage extends Component {
     _init() {
         this._elements.repeater.Manager = this.constructor.Repeater_manager;
         this.refresh();
-        this._result__load()
+        this.result__insert()
     }
 
     _repeater__on_add(event) {
@@ -56,7 +56,29 @@ export class ResultPage extends Component {
 
 
     result__insert(result) {
-        this._elements.repeater.model.add(result);
+        let data = [
+            {
+                progress: 99,
+            },
+            {
+                progress: 80,
+            },
+            {
+                progress: 12,
+            },
+            {
+                progress: 99,
+            },
+            {
+                progress: 80,
+            },
+            {
+                progress: 12,
+            },
+        ];
+
+        this._elements.repeater.model.add(data);
+        // this._elements.repeater.model.add(result);
     }
 
     refresh() {
