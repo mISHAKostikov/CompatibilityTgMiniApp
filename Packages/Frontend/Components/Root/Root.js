@@ -31,10 +31,11 @@ export class Root extends Component {
 
     _eventListeners__define() {
         this._elements.button__start.addEventListener('pointerdown', this._button__start__on_pointerDown.bind(this));
-        this._elements.form__page._elements.buttonCalculate.addEventListener('pointerdown', this._form__page__on_pointerDown.bind(this));
+        this._elements.form__page._elements.buttonCalculate.addEventListener('pointerdown', this._button__calc__on_pointerDown.bind(this));
     }
 
-    _button__calc__on_pointerDown() {
+    async _button__calc__on_pointerDown() {
+        await this._elements.form__page._elements.buttonCalculate._promise;
         this._result__define();
     }
 
@@ -44,22 +45,18 @@ export class Root extends Component {
     }
 
     async _result__define() {
-        let result = await this._result__receive();
+        // let result = await this._result__receive();
 
-        if (!result.length) return;
+        // if (!result.length) return;
 
         this._elements.leafable.index++;
-        this._elements.result__page.result__insert(data);
+        // this._elements.result__page.result__insert(data);
+        this._elements.result__page.refresh();
     }
 
     async _result__receive() {
         let data = await this._rest.call('compatibility__calc', `name_1`, `name_2`); // должен вернуть массив объектов
 
         return data;
-    }
-
-    async _form__page__on_pointerDown() {
-        await this._elements.form__page._elements.buttonCalculate._promise;
-        this._elements.leafable.index++;
     }
 }
