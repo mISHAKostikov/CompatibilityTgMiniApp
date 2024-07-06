@@ -54,31 +54,10 @@ export class ResultPage extends Component {
         this.refresh();
     }
 
-    _result__load() {
-        let result = [
-            {
-                progress: 99,
-            },
-            {
-                progress: 80,
-            },
-            {
-                progress: 12,
-            },
-            {
-                progress: 99,
-            },
-            {
-                progress: 80,
-            },
-            {
-                progress: 12,
-            },
-        ];
 
+    result__insert(result) {
         this._elements.repeater.model.add(result);
     }
-
 
     refresh() {
         this._elements.display.refresh();
