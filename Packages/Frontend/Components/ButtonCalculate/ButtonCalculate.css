@@ -5,7 +5,7 @@
 @layer init {
     :host([_animation]) {
         .image {
-            animation: animation__image 1.7s ease;
+            animation: animation__image 1s ease-in-out;
         }
     }
 
@@ -14,7 +14,7 @@
         display: block;
         grid-area: 1 / 1 / 1 / 1;
         margin: auto;
-        width:  100px;
+        width:  125px;
     }
 
     .root {
@@ -23,20 +23,12 @@
     }
 
     @keyframes animation__image {
-        25% {
-            width: 120px;
+        0% {
+            transform: rotate(0deg);
         }
-
-        50% {
-            width: 100px;
-        }
-
-        75% {
-            width: 125px;
-        }
-
         100% {
-            width: 1px;
+            transform: rotate(720deg);
+            width: 10px;
         }
     }
 }
