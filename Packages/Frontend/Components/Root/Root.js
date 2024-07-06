@@ -31,10 +31,10 @@ export class Root extends Component {
 
     _eventListeners__define() {
         this._elements.button__start.addEventListener('pointerdown', this._button__start__on_pointerDown.bind(this));
-        this._elements.form__page._elements.buttonCalculate.addEventListener('pointerdown', this._button__calc__on_pointerDown.bind(this));
+        this._elements.form__page._elements.buttonCalculate.addEventListener('pointerdown', this._button_calculate__on_pointerDown.bind(this));
     }
 
-    async _button__calc__on_pointerDown() {
+    async _button_calculate__on_pointerDown() {
         await this._elements.form__page._elements.buttonCalculate._promise;
         this._result__define();
     }
