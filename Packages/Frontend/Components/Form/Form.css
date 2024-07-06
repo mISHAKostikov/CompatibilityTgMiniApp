@@ -1,7 +1,6 @@
-@font-face {
-    font-family: 'mv-weekend';
-    src: url('../../../Storage/Fonts/MV-WEEKEND.ttf');
-}
+@layer init;
+
+@import '../../Theme/Theme.css' layer(theme);
 
 @layer init {
     :host {
@@ -18,8 +17,7 @@
 
     .label {
         background: var(--Theme__block__background_accent);
-        font-family: 'mv-weekend';
-        font-size: 36px;
+        font-size: 26px;
         height: fit-content;
         text-align: center;
     }
