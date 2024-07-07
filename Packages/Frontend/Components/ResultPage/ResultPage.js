@@ -42,11 +42,11 @@ export class ResultPage extends Component {
 
     _init() {
         this._elements.repeater.Manager = this.constructor.Repeater_manager;
-        this.refresh();
         this.result__insert()
+        this.refresh();
     }
 
-    _repeater__on_add(event) {
+    _repeater__on_add() {
         this.refresh();
     }
 
@@ -79,6 +79,8 @@ export class ResultPage extends Component {
 
         this._elements.repeater.model.add(data);
         // this._elements.repeater.model.add(result);
+
+        this.refresh();
     }
 
     refresh() {
