@@ -31,7 +31,6 @@ export class Edit extends Component {
         this._elements.input.placeholder = this.placeholder;
     }
 
-
     _eventListeners__define() {
         this._elements.input.addEventListener('beforeinput', this._input__on_beforeInput.bind(this), false);
     }

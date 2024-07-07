@@ -26,7 +26,7 @@ export class Root extends Component {
     }
 
 
-    _rest = new Rest(`server_url`);
+    _rest = new Rest(`http://127.0.0.1:2000`);
 
 
     _eventListeners__define() {
@@ -59,6 +59,7 @@ export class Root extends Component {
     }
 
     async _form__page__on_pointerDown() {
+        await this._result__receive();
         await this._elements.form__page._elements.buttonCalculate._promise;
         this._elements.leafable.index++;
     }
