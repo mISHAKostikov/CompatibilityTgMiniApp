@@ -3,6 +3,11 @@
 @import '../../Theme/Theme.css' layer(theme);
 
 @layer init {
+    :host {
+        cursor: pointer;
+        width: fit-content;
+    }
+
     :host([_animation]) {
         .image {
             animation: animation__image 1s ease-in-out;
@@ -10,23 +15,17 @@
     }
 
     .image {
-        cursor: pointer;
-        display: block;
-        grid-area: 1 / 1 / 1 / 1;
-        margin: auto;
         width:  125px;
     }
 
     .root {
         display: grid;
-        margin: auto;
+        justify-items: center;
+        align-items: center;
     }
 
     @keyframes animation__image {
-        0% {
-            transform: rotate(0deg);
-        }
-        100% {
+        to {
             transform: rotate(720deg);
             width: 10px;
         }

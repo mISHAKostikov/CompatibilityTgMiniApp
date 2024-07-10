@@ -56,31 +56,31 @@ export class ResultPage extends Component {
 
 
     result__insert(result) {
-        let data = [
-            {
-                progress: 99,
-            },
-            {
-                progress: 80,
-            },
-            {
-                progress: 12,
-            },
-            {
-                progress: 99,
-            },
-            {
-                progress: 80,
-            },
-            {
-                progress: 12,
-            },
-        ];
+        // let data = [
+        //     {
+        //         progress: 99,
+        //     },
+        //     {
+        //         progress: 80,
+        //     },
+        //     {
+        //         progress: 12,
+        //     },
+        //     {
+        //         progress: 99,
+        //     },
+        //     {
+        //         progress: 80,
+        //     },
+        //     {
+        //         progress: 12,
+        //     },
+        // ];
 
-        this._elements.repeater.model.add(data);
-        // this._elements.repeater.model.add(result);
+        // this._elements.repeater.model.add(data);
+        this._elements.repeater.model.add(result);
 
-        this.refresh();
+        // this.refresh();
     }
 
     refresh() {

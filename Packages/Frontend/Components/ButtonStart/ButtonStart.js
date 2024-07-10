@@ -1,7 +1,7 @@
 import {Component} from '../../Api/Components/Component/Component.js';
 
 
-export class Button extends Component {
+export class ButtonStart extends Component {
     static _attributes = {
         ...super._attributes,
 

@@ -31,6 +31,17 @@ export class Edit extends Component {
         this._elements.input.placeholder = this.placeholder;
     }
 
+    get value() {
+        return this._elements.input.value;
+    }
+    set value(value) {
+        let value_process = value + '';
+
+        if (value_process[0] != '@') return;
+
+        this._elements.input.value = value_process;
+    }
+
     _eventListeners__define() {
         this._elements.input.addEventListener('beforeinput', this._input__on_beforeInput.bind(this), false);
     }

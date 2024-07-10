@@ -2,17 +2,17 @@ import {Component} from '../../Api/Components/Component/Component.js';
 import {Leafable} from '../../Api/Components/Leafable/Leafable.js';
 import {Rest} from '../../Api/Units/Rest/Rest.js';
 
-import {Button} from '../Button/Button.js';
-import {Form} from '../Form/Form.js';
+import {ButtonStart} from '../ButtonStart/ButtonStart.js';
+import {FormPage} from '../FormPage/FormPage.js';
 import {ResultPage} from '../ResultPage/ResultPage.js';
 
 
 export class Root extends Component {
     static _elements = {
-        button__start: '',
-        form__page: '',
+        buttonStart: '',
+        formPage: '',
         leafable: '',
-        result__page: '',
+        resultPage: '',
     };
 
 
@@ -30,39 +30,32 @@ export class Root extends Component {
 
 
     _eventListeners__define() {
-        this._elements.button__start.addEventListener('pointerdown', this._button__start__on_pointerDown.bind(this));
-        this._elements.form__page._elements.buttonCalculate.addEventListener('pointerdown', this._button_calculate__on_pointerDown.bind(this));
+        this._elements.buttonStart.addEventListener('pointerdown', this._buttonStart__on_pointerDown.bind(this));
+        this._elements.formPage.addEventListener('calculate', this._formPage__on_calculate.bind(this));
     }
 
-    async _button_calculate__on_pointerDown() {
-        await this._elements.form__page._elements.buttonCalculate._promise;
-        this._result__define();
+    _formPage__on_calculate(event) {
+        this._result__define(event.detail);
     }
 
-    async _button__start__on_pointerDown() {
-        await this._elements.button__start._promise;
+    async _buttonStart__on_pointerDown() {
+        await this._elements.buttonStart._promise;
         this._elements.leafable.index++;
     }
 
-    async _result__define() {
-        // let result = await this._result__receive();
+    async _result__define(data) {
+        let result = await this._result__receive(data);
 
-        // if (!result.length) return;
+        if (!result.length) return;
 
         this._elements.leafable.index++;
-        // this._elements.result__page.result__insert(data);
-        this._elements.result__page.refresh();
+        this._elements.result__page.result__insert(result);
+        // this._elements.result__page.refresh();
     }
 
-    async _result__receive() {
-        let data = await this._rest.call('compatibility__calc', `name_1`, `name_2`); // должен вернуть массив объектов
+    async _result__receive(data) {
+        let result = await this._rest.call('compatibility__calc', data.name_1, data.name_2);
 
-        return data;
-    }
-
-    async _form__page__on_pointerDown() {
-        await this._result__receive();
-        await this._elements.form__page._elements.buttonCalculate._promise;
-        this._elements.leafable.index++;
+        return result;
     }
 }

@@ -9,9 +9,7 @@
         width:  100dvw;
     }
 
-    .button {
-        /* aspect-ratio: 1; */
-        height: 25dvh;
+    .buttonCalculate {
         justify-self: center;
     }
 

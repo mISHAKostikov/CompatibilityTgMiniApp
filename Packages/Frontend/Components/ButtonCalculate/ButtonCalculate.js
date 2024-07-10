@@ -5,7 +5,7 @@ export class ButtonCalculate extends Component {
     static _attributes = {
         ...super._attributes,
 
-        _animation: false,
+        animation: false,
     }
 
     static _elements = {
@@ -27,17 +27,17 @@ export class ButtonCalculate extends Component {
     _promise_resolve = null;
 
 
-    get _animation() {
+    get animation() {
         return this._attributes._animation;
     }
-    set _animation(animation) {
+    set animation(animation) {
         this._attribute__set('_animation', animation);
     }
 
 
     _eventListeners__define() {
         this.eventListeners__add({
-            pointerdown: this._on_pointerDown,
+            // pointerdown: this._on_pointerDown,
             animationend: this._on_animationEnd,
         });
 
@@ -48,11 +48,11 @@ export class ButtonCalculate extends Component {
         this._promise = new Promise((resolve) => this._promise_resolve = resolve);
     }
 
-    _on_pointerDown(event) {
-        this._animation = true;
+    // _on_pointerDown(event) {
+    //     this._animation = true;
 
-        //console.log(event)
-    }
+    //     //console.log(event)
+    // }
 
     _circle__on_animationEnd(event) {
     // _on_animationEnd(event) {
