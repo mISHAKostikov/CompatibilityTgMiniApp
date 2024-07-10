@@ -1,6 +1,3 @@
-import 'https://telegram.org/js/telegram-web-app.js';
-console.log(window.Telegram.WebApp)
-
 import {Component} from '../../Api/Components/Component/Component.js';
 import {Leafable} from '../../Api/Components/Leafable/Leafable.js';
 import {Rest} from '../../Api/Units/Rest/Rest.js';
@@ -31,6 +28,7 @@ export class Root extends Component {
 
     _form_data = [];
     _rest = new Rest(`http://127.0.0.1:2000`);
+    _telegram = null;
 
 
     _eventListeners__define() {
@@ -62,5 +60,11 @@ export class Root extends Component {
         let result = await this._rest.call('compatibility__calc', ...this._form_data);
 
         return result;
+    }
+
+    _init() {
+        this._telegram = window.Telegram.WebApp;
+
+        // console.log(this._telegram.platform)
     }
 }
