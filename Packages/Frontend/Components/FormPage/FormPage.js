@@ -22,10 +22,9 @@ export class FormPage extends Component {
         let name_1 = this._elements.name_1.value;
         let name_2 = this._elements.name_2.value;
 
-        if (!name_1 || !name_2) return;
+        if (!name_1 || !name_2 || name_1 == name_2) return;
 
-        this._elements.buttonCalculate.animation = true;;
-        await this._elements.buttonCalculate._promise;
+        this._elements.buttonCalculate.animation = true;
 
         let detail = {
             name_1: name_1,
@@ -33,6 +32,8 @@ export class FormPage extends Component {
         }
 
         this.event__dispatch('calculate', detail);
+
+        await this._elements.buttonCalculate._promise;
     }
 
     _eventListeners__define() {
