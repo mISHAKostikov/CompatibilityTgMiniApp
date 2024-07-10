@@ -1,3 +1,6 @@
+import 'https://telegram.org/js/telegram-web-app.js';
+console.log(window.Telegram.WebApp)
+
 import {Component} from '../../Api/Components/Component/Component.js';
 import {Leafable} from '../../Api/Components/Leafable/Leafable.js';
 import {Rest} from '../../Api/Units/Rest/Rest.js';
