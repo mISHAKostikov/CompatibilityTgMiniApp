@@ -26,6 +26,7 @@ export class Root extends Component {
     }
 
 
+    _form_data = [];
     _rest = new Rest(`http://127.0.0.1:2000`);
 
 
@@ -35,7 +36,8 @@ export class Root extends Component {
     }
 
     _formPage__on_calculate(event) {
-        this._result__define(event.detail);
+        this._form_data = event.detail;
+        this._result__define();
     }
 
     async _buttonStart__on_pointerDown() {
@@ -43,8 +45,8 @@ export class Root extends Component {
         this._elements.leafable.index++;
     }
 
-    async _result__define(data) {
-        let result = await this._result__receive(data);
+    async _result__define() {
+        let result = await this._result__receive();
 
         if (!result.length) return;
 
@@ -53,8 +55,8 @@ export class Root extends Component {
         // this._elements.result__page.refresh();
     }
 
-    async _result__receive(data) {
-        let result = await this._rest.call('compatibility__calc', data.name_1, data.name_2);
+    async _result__receive() {
+        let result = await this._rest.call('compatibility__calc', ...this._form_data);
 
         return result;
     }

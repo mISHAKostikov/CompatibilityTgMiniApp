@@ -26,10 +26,10 @@ export class FormPage extends Component {
 
         this._elements.buttonCalculate.animation = true;
 
-        let detail = {
-            name_1: name_1,
-            name_2: name_2,
-        }
+        let detail = [
+            name_1,
+            name_2,
+        ]
 
         this.event__dispatch('calculate', detail);
 
