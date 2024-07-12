@@ -59,7 +59,7 @@ export class Root extends Component {
         if (!result.length) return;
 
         this._elements.leafable.index++;
-        this._elements.result__page.result__insert(result);
+        this._elements.resultPage.result__insert(result);
         // this._elements.result__page.refresh();
     }
 
