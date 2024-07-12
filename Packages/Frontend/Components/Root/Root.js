@@ -8,6 +8,8 @@ import {ResultPage} from '../ResultPage/ResultPage.js';
 
 
 export class Root extends Component {
+    static _components = [ResultPage];
+
     static _elements = {
         buttonStart: '',
         formPage: '',
