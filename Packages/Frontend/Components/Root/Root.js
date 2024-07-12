@@ -59,19 +59,31 @@ export class Root extends Component {
         if (!result.length) return;
 
         this._elements.leafable.index++;
+<<<<<<< Updated upstream
         this._elements.resultPage.result__insert(result);
         // this._elements.result__page.refresh();
     }
 
     async _result__receive() {
         let result = await this._rest.call('compatibility__calc', ...this._form_data);
+=======
+        this._elements.result__page.result__insert(data);
+        this._elements.result__page.refresh();
+    }
+
+    async _result__receive() {
+        let data = await this._rest.call('compatibility__calc', `name_1`); // должен вернуть массив объектов
+>>>>>>> Stashed changes
 
         return result;
     }
+<<<<<<< Updated upstream
 
     _init() {
         this._telegram = window.Telegram.WebApp;
 
         // console.log(this._telegram.platform)
     }
+=======
+>>>>>>> Stashed changes
 }
