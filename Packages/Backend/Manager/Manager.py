@@ -1,15 +1,11 @@
-import asyncio
+from flask import Flask, request, jsonify
+from flask_cors import CORS, cross_origin
 import json
-import socket
 
+app = Flask(__name__)
+CORS(app, support_credentials=True)
 
-class Manager(socket.socket):
-    def __init__(self):
-        super().__init__(socket.AF_INET, socket.SOCK_STREAM)
-        self.bind(('127.0.0.1', 2000))
-        self.listen(4)
-
-    def compatibility__calc(self, name_1, name_2):
+def compatibility__calc(name_1, name_2):
         bin_name_1 = ''.join(format(i, '08b') for i in bytearray(name_1, encoding='utf-8'))
         bin_name_2 = ''.join(format(i, '08b') for i in bytearray(name_2, encoding='utf-8'))
 
@@ -29,51 +25,30 @@ class Manager(socket.socket):
             if not sym_1 or not sym_2:
                 res_3 += 1
 
-        percent_1 = round(res_1 / len(num_1), 2)
-        percent_2 = round(res_2 / len(num_1), 2)
-        percent_3 = round(res_3 / len(num_1), 2)
+        percent_1 = round(res_1 / len(num_1), 2) * 100
+        percent_2 = round(res_2 / len(num_1), 2) * 100
+        percent_3 = round(res_3 / len(num_1), 2) * 100
 
         return percent_1, percent_2, percent_3
 
-    async def data_reception_send(self):
-        global n
-        # Приём данных
-        client_socket, addr = self.accept()
-        data = client_socket.recv(1024).decode('utf-8')
-
-        # Обработка принятых данных
+@app.route('/', methods=['POST'])
+@cross_origin(supports_credentials=True)
+def data_reception_send():
+        data = request.data.decode('utf-8')
         json_data = json.loads(data.split('\n')[-1])
         method = json_data['method']
         method_args = json_data['method_args']
+        name_1, name_2 = method_args
+        compatibility, friendship, love = compatibility__calc(name_1, name_2)
+        print(compatibility, friendship, love)
 
-        json_end_data = 'zero_data'
+        end_data = [
+            {"name": "Совместимость", "progress": compatibility},
+            {"name": "Дружба", "progress": friendship},
+            {"name": "Любовь", "progress": love}
+        ]
 
-        if method == 'compatibility__calc':
-            name_1, name_2 = method_args
-            compatibility, friendship, love = self.compatibility__calc(name_1, name_2)
-            print(compatibility, friendship, love)
+        return json.dumps(end_data, indent=4)
 
-            end_data = [
-                {"name": "Совместимость", "progress": compatibility},
-                {"name": "Дружба", "progress": friendship},
-                {"name": "Любовь", "progress": love}
-            ]
-
-            json_end_data = json.dumps(end_data, indent=4)
-            print(json_end_data)
-
-        # Отправка обработанных данных
-        # Сейчас не работает...
-        client_socket.send(json_end_data.encode())
-
-
-manager = Manager()
-
-
-async def main():
-    await manager.data_reception_send()
-
-
-if __name__ == "__main__":
-    while True:
-        asyncio.run(main())
+if __name__ == '__main__':
+        app.run(port=2000)
