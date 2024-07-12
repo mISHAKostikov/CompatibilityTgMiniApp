@@ -62,4 +62,4 @@ def compatibility__calc(name_1, name_2):
 
 
 if __name__ == '__main__':
-    app.run(port=2000)
+    app.run(port = 2000)

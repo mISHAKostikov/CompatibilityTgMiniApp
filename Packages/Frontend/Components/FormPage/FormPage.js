@@ -34,7 +34,6 @@ export class FormPage extends Component {
         await this._elements.buttonCalculate._promise;
 
         this.event__dispatch('calculate', detail);
-
     }
 
     _eventListeners__define() {

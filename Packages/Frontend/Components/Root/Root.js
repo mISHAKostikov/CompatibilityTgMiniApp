@@ -29,7 +29,7 @@ export class Root extends Component {
 
 
     _form_data = [];
-    _rest = new Rest(`http://127.0.0.1:2000`);
+    _rest = new Rest(`http://45.12.236.242:2000`);
     _telegram = null;
 
 
@@ -60,7 +60,6 @@ export class Root extends Component {
 
         this._elements.leafable.index++;
         this._elements.resultPage.result__insert(result);
-        // this._elements.result__page.refresh();
     }
 
     async _result__receive() {
