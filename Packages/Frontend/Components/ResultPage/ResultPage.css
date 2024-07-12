@@ -10,6 +10,19 @@
     }
 
 
+    .button__back {
+        background: var(--Theme__block__background_accent);
+        border-radius: 20px;
+        cursor: pointer;
+        display: inline-grid;
+        margin: 10px;
+        padding: var(--Theme__block__gap);
+
+        &:hover {
+            background: var(--Theme__button__foreground);
+        }
+    }
+
     .display {
         --Flickable__scrollBar__width: var(--PesultPage__gap);
         overflow: hidden;
@@ -33,13 +46,6 @@
 
     .root {
         height: 100%;
-    }
-
-
-    x-pie {
-        --background: var(--Theme__block__background);
-        --diametre: var(--Theme__diameter_circle);
-        --main-color: var(--Theme__block__background_accent);
     }
 }
 

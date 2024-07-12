@@ -34,16 +34,21 @@ export class Root extends Component {
     _eventListeners__define() {
         this._elements.buttonStart.addEventListener('pointerdown', this._buttonStart__on_pointerDown.bind(this));
         this._elements.formPage.addEventListener('calculate', this._formPage__on_calculate.bind(this));
+        this._elements.resultPage._elements.button__back.addEventListener('pointerdown', this._button__back__on_pointerDown.bind(this));
     }
 
-    _formPage__on_calculate(event) {
-        this._form_data = event.detail;
-        this._result__define();
+    _button__back__on_pointerDown() {
+       this._elements.leafable.index--;
     }
 
     async _buttonStart__on_pointerDown() {
         await this._elements.buttonStart._promise;
         this._elements.leafable.index++;
+    }
+
+    _formPage__on_calculate(event) {
+        this._form_data = event.detail;
+        this._result__define();
     }
 
     async _result__define() {

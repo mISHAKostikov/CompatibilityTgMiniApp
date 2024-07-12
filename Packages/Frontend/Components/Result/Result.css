@@ -1,0 +1,23 @@
+@layer init;
+
+@import '../../Theme/Theme.css' layer(theme);
+
+@layer init {
+    :host {
+        display: inline-block;
+    }
+
+
+    .root {
+        align-items: center;
+        display: grid;
+        justify-items: center;
+    }
+
+    x-pie {
+        --background: var(--Theme__block__background);
+        --diametre: var(--Theme__diameter_circle);
+        --main-color: var(--Theme__block__background_accent);
+    }
+}
+

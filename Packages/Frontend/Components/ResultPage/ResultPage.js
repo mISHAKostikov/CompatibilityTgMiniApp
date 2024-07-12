@@ -2,13 +2,14 @@ import {Component} from '../../Api/Components/Component/Component.js';
 import {Flickable} from '../../Api/Components/Flickable/Flickable.js';
 import {Repeater} from '../../Api/Components/Repeater/Repeater.js';
 
-import {Pie} from '../Pie/Pie.js';
+import {Result} from '../Result/Result.js';
 
 
 export class ResultPage extends Component {
-    static _components = [Flickable, Repeater, Pie];
+    static _components = [Flickable, Repeater, Result];
 
     static _elements = {
+        button__back: '',
         display: '',
         repeater: '',
     };
@@ -20,6 +21,7 @@ export class ResultPage extends Component {
     static Repeater_manager = class extends Repeater.Manager {
         data__apply() {
             this._item.progress = this._model_item.progress;
+            this._item.title = this._model_item.name;
         }
 
         init() {
@@ -58,23 +60,17 @@ export class ResultPage extends Component {
     result__insert(result) {
         // let data = [
         //     {
-        //         progress: 99,
+        //         name: 'Совместимость',
+        //         progress: 99
         //     },
         //     {
-        //         progress: 80,
+        //         name: 'Дружба',
+        //         progress: 80
         //     },
         //     {
-        //         progress: 12,
-        //     },
-        //     {
-        //         progress: 99,
-        //     },
-        //     {
-        //         progress: 80,
-        //     },
-        //     {
-        //         progress: 12,
-        //     },
+        //         name: 'Любовь',
+        //         progress: 12
+        //     }
         // ];
 
         // this._elements.repeater.model.add(data);
