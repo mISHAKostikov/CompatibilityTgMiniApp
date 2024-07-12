@@ -44,7 +44,6 @@ export class ResultPage extends Component {
 
     _init() {
         this._elements.repeater.Manager = this.constructor.Repeater_manager;
-        this.result__insert()
         this.refresh();
     }
 
@@ -58,25 +57,8 @@ export class ResultPage extends Component {
 
 
     result__insert(result) {
-        // let data = [
-        //     {
-        //         name: 'Совместимость',
-        //         progress: 99
-        //     },
-        //     {
-        //         name: 'Дружба',
-        //         progress: 80
-        //     },
-        //     {
-        //         name: 'Любовь',
-        //         progress: 12
-        //     }
-        // ];
-
-        // this._elements.repeater.model.add(data);
+        this._elements.repeater.model.clear();
         this._elements.repeater.model.add(result);
-
-        // this.refresh();
     }
 
     refresh() {
