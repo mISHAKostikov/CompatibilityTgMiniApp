@@ -29,7 +29,7 @@ export class Root extends Component {
 
 
     _form_data = [];
-    _rest = new Rest(`http://compatibility.proalemd.beget.tech:8000`);
+    _rest = new Rest(`https://compatibility.proalemd.beget.tech:8000`);
     _telegram = null;
 
 
