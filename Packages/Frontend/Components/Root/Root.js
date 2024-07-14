@@ -29,7 +29,7 @@ export class Root extends Component {
 
 
     _form_data = [];
-    _rest = new Rest(`https://https://mmnds.store`);
+    _rest = new Rest(`https://mmnds.store`);
     _telegram = null;
 
 
