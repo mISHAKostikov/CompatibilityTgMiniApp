@@ -20,6 +20,7 @@
         --Theme__font_lineHeight: 2;
         --Theme__font_size: 20px;
         --Theme__foreground: #fff;
+        --Theme__ghost_transition: opacity 0.6s ease-out;
         --Theme__hue: 200;
         --Theme__shadow: #0004;
 
@@ -41,7 +42,7 @@
     x-flickable {
         --Flickable__puck__margin_inner: 32px;
         box-sizing: border-box;
-        height: calc(100dvh - var(--Theme__block__gap) - var(--Theme__font_size));
+        height: calc(100dvh - 50px);
         padding: 5px;
         position: relative;
         width: 100dvw;

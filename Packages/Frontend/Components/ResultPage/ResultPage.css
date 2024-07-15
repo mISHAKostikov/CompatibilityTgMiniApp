@@ -11,12 +11,12 @@
 
 
     .button__back {
+        align-content: center;
+        color: var(--Theme__button__foreground_light);
         cursor: pointer;
         display: grid;
+        height: 50px;
         justify-content: center;
-        color: var(--Theme__button__foreground_light);
-        /* margin: 10px; */
-        padding: var(--Theme__block__gap);
 
         &:hover {
             color: var(--Theme__button__foreground);
