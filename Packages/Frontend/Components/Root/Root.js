@@ -94,13 +94,14 @@ export class Root extends Component {
     _init() {
         this._telegram = window.Telegram.WebApp;
         console.log(
-            this._telegram.WebAppUser.id,
-            this._telegram.WebAppUser.is_bot,
-            this._telegram.WebAppUser.first_name,
-            this._telegram.WebAppUser.last_name,
-            this._telegram.WebAppUser.username,
-            this._telegram.WebAppUser.language_code,
-            this._telegram.WebAppUser.is_premium,
+            this._telegram.WebAppUser,
+            // this._telegram.WebAppUser.id,
+            // this._telegram.WebAppUser.is_bot,
+            // this._telegram.WebAppUser.first_name,
+            // this._telegram.WebAppUser.last_name,
+            // this._telegram.WebAppUser.username,
+            // this._telegram.WebAppUser.language_code,
+            // this._telegram.WebAppUser.is_premium,
             this._telegram.platform
         );
         this.props__sync('verticalSwipes');
