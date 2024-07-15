@@ -10,6 +10,8 @@ export class FormPage extends Component {
         buttonCalculate: '',
     };
 
+    static _components = [Edit, ButtonCalculate];
+
 
     static css_url = true;
     static html_url = true;
