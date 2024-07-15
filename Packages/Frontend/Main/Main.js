@@ -1,6 +1,6 @@
 import {Root} from '../Components/Root/Root.js';
 
-let falg = false
+let flag = false
 
 window.addEventListener('load',() => {
     // window.Telegram.WebApp.expand();
