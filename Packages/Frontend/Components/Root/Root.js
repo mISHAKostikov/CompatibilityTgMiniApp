@@ -93,7 +93,6 @@ export class Root extends Component {
 
     _init() {
         this._telegram = window.Telegram.WebApp;
-        alert(this._telegram.version);
         this.props__sync('verticalSwipes');
     }
 }
