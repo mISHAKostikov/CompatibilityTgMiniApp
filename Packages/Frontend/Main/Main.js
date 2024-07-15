@@ -9,7 +9,7 @@ let root;
 
 async function main() {
     root = await import('../Components/Root/Root.js');
-    alert(root)
+    alert(2)
 }
 
 main();
