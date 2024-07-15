@@ -14,7 +14,7 @@ export class Root extends Component {
         verticalSwipes: true,
     }
 
-    static _components = [ResultPage];
+    static _components = [ButtonStart, FormPage, Leafable, ResultPage];
 
     static _elements = {
         buttonStart: '',
