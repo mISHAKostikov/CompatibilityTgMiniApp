@@ -6,7 +6,7 @@ import {ButtonStart} from '../ButtonStart/ButtonStart.js';
 import {FormPage} from '../FormPage/FormPage.js';
 import {ResultPage} from '../ResultPage/ResultPage.js';
 
-alert(2)
+
 export class Root extends Component {
     static _attributes = {
         ...super._attributes,
@@ -14,7 +14,6 @@ export class Root extends Component {
         verticalSwipes: true,
     }
 
-    // static _components = [Leafable];
     static _components = [ButtonStart, FormPage, Leafable, ResultPage];
 
     static _elements = {
@@ -30,9 +29,9 @@ export class Root extends Component {
     static url = import.meta.url;
 
 
-    // static {
-    //     this.define();
-    // }
+    static {
+        this.define();
+    }
 
 
     _form_data = [];
@@ -93,10 +92,8 @@ export class Root extends Component {
     }
 
     _init() {
-        // this._telegram = window.Telegram.WebApp;
-        // this.props__sync('verticalSwipes');
+        this._telegram = window.Telegram.WebApp;
+        alert(this._telegram.version);
+        this.props__sync('verticalSwipes');
     }
 }
-
-
-Root.define();
