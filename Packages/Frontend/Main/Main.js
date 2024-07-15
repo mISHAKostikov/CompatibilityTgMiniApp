@@ -11,6 +11,7 @@ window.addEventListener('load',() => {
 // let root;
 function a() {
     if (flag) return;
+    console.log(flag)
     location = location.origin + location.pathname;
     flag = true;
 }
