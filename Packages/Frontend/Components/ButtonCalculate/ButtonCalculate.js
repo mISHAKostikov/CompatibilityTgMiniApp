@@ -45,7 +45,7 @@ export class ButtonCalculate extends Component {
     }
 
     _init() {
-        this._telegram = window.Telegram.WebApp;
+        // this._telegram = window.Telegram.WebApp;
         this._promise = new Promise((resolve) => this._promise_resolve = resolve);
     }
 

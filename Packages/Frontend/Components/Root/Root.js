@@ -14,7 +14,8 @@ export class Root extends Component {
         verticalSwipes: true,
     }
 
-    // static _components = [ButtonStart, FormPage, Leafable, ResultPage];
+    // static _components = [Leafable];
+    static _components = [ButtonStart, FormPage, Leafable, ResultPage];
 
     static _elements = {
         buttonStart: '',
@@ -55,9 +56,9 @@ export class Root extends Component {
 
 
     _eventListeners__define() {
-        // this._elements.buttonStart.addEventListener('pointerdown', this._buttonStart__on_pointerDown.bind(this));
-        // this._elements.formPage.addEventListener('calculate', this._formPage__on_calculate.bind(this));
-        // this._elements.resultPage._elements.button__back.addEventListener('pointerdown', this._button__back__on_pointerDown.bind(this));
+        this._elements.buttonStart.addEventListener('pointerdown', this._buttonStart__on_pointerDown.bind(this));
+        this._elements.formPage.addEventListener('calculate', this._formPage__on_calculate.bind(this));
+        this._elements.resultPage._elements.button__back.addEventListener('pointerdown', this._button__back__on_pointerDown.bind(this));
     }
 
     _button__back__on_pointerDown() {
@@ -92,8 +93,8 @@ export class Root extends Component {
     }
 
     _init() {
-        this._telegram = window.Telegram.WebApp;
-        this.props__sync('verticalSwipes');
+        // this._telegram = window.Telegram.WebApp;
+        // this.props__sync('verticalSwipes');
     }
 }
 

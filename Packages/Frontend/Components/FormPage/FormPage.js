@@ -51,6 +51,6 @@ export class FormPage extends Component {
     }
 
     _init() {
-        this._telegram = window.Telegram.WebApp;
+        // this._telegram = window.Telegram.WebApp;
     }
 }
