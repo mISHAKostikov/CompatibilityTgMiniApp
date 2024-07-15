@@ -12,8 +12,8 @@ window.addEventListener('load',() => {
 function a() {
     if (flag) return;
     console.log(flag)
-    location = location.origin + location.pathname;
     flag = true;
+    location = location.origin + location.pathname;
 }
 
 // async function b() {
