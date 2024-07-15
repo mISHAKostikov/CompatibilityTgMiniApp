@@ -6,7 +6,7 @@ import {Result} from '../Result/Result.js';
 
 
 export class ResultPage extends Component {
-    static _components = [Flickable, Repeater, Result];
+    static _components = [Repeater];
 
     static _elements = {
         button__back: '',
