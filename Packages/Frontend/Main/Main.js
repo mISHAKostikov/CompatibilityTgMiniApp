@@ -2,7 +2,7 @@ import {Root} from '../Components/Root/Root.js';
 
 
 
-window.addEventListener('load',() => {
+window.addEventListener('DOMContentLoaded', () => {
     window.Telegram.WebApp.expand();
     // a()
 })
