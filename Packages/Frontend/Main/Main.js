@@ -10,9 +10,7 @@ window.addEventListener('load',() => {
 
 // let root;
 function a() {
-    if (flag) return;
-    console.log(flag)
-    flag = true;
+    if (location == 'https://mishakostikov.github.io/CompatibilityTgMiniApp/') return;
     location = location.origin + location.pathname;
 }
 
