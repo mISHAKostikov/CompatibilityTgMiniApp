@@ -10,6 +10,7 @@ export class FormPage extends Component {
         buttonCalculate: '',
     };
 
+
     static css_url = true;
     static html_url = true;
     static url = import.meta.url;
@@ -18,11 +19,18 @@ export class FormPage extends Component {
         this.define();
     }
 
+
+    _telegram = null;
+
+
     async _buttonCalculate__on_pointerDown() {
         let name_1 = this._elements.name_1.value;
         let name_2 = this._elements.name_2.value;
 
-        if (!name_1 || !name_2 || name_1 == name_2) return;
+        if (!name_1 || !name_2 || name_1 == name_2) {
+            this._telegram.HapticFeedback.notificationOccurred('warning');
+            return;
+        }
 
         this._elements.buttonCalculate.animation = true;
 
@@ -38,5 +46,9 @@ export class FormPage extends Component {
 
     _eventListeners__define() {
         this._elements.buttonCalculate.addEventListener('pointerdown', this._buttonCalculate__on_pointerDown.bind(this));
+    }
+
+    _init() {
+        this._telegram = window.Telegram.WebApp;
     }
 }

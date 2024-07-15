@@ -8,6 +8,12 @@ import {ResultPage} from '../ResultPage/ResultPage.js';
 
 
 export class Root extends Component {
+    static _attributes = {
+        ...super._attributes,
+
+        verticalSwipes: true,
+    }
+
     static _components = [ResultPage];
 
     static _elements = {
@@ -33,6 +39,21 @@ export class Root extends Component {
     _telegram = null;
 
 
+    get verticalSwipes() {
+        return this._attributes.verticalSwipes;
+    }
+    set verticalSwipes(value) {
+        if (value) {
+            this._telegram.enableVerticalSwipes();
+        }
+        else {
+            this._telegram.disableVerticalSwipes();
+        }
+
+        this._attribute__set('verticalSwipes', !!value);
+    }
+
+
     _eventListeners__define() {
         this._elements.buttonStart.addEventListener('pointerdown', this._buttonStart__on_pointerDown.bind(this));
         this._elements.formPage.addEventListener('calculate', this._formPage__on_calculate.bind(this));
@@ -41,6 +62,7 @@ export class Root extends Component {
 
     _button__back__on_pointerDown() {
        this._elements.leafable.index--;
+       this.verticalSwipes = true;
     }
 
     async _buttonStart__on_pointerDown() {
@@ -60,6 +82,7 @@ export class Root extends Component {
 
         this._elements.leafable.index++;
         this._elements.resultPage.result__insert(result);
+        this.verticalSwipes = false;
     }
 
     async _result__receive() {
@@ -70,7 +93,7 @@ export class Root extends Component {
 
     _init() {
         this._telegram = window.Telegram.WebApp;
-
+        this.props__sync('verticalSwipes');
         // console.log(this._telegram.platform)
     }
 }

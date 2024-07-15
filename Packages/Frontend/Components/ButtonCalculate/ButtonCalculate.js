@@ -25,6 +25,7 @@ export class ButtonCalculate extends Component {
 
     _promise = null;
     _promise_resolve = null;
+    _telegram = null;
 
 
     get animation() {
@@ -32,6 +33,7 @@ export class ButtonCalculate extends Component {
     }
     set animation(animation) {
         this.attribute__set('_animation', animation);
+        this._telegram.HapticFeedback.impactOccurred('soft');
     }
 
 
@@ -43,6 +45,7 @@ export class ButtonCalculate extends Component {
     }
 
     _init() {
+        this._telegram = window.Telegram.WebApp;
         this._promise = new Promise((resolve) => this._promise_resolve = resolve);
     }
 

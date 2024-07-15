@@ -25,6 +25,7 @@ export class ButtonStart extends Component {
 
     _promise = null;
     _promise_resolve = null;
+    _telegram = null;
 
 
     get _animation() {
@@ -32,6 +33,7 @@ export class ButtonStart extends Component {
     }
     set _animation(animation) {
         this._attribute__set('_animation', animation);
+        this._telegram.HapticFeedback.impactOccurred('medium');
     }
 
 
@@ -45,6 +47,7 @@ export class ButtonStart extends Component {
     }
 
     _init() {
+        this._telegram = window.Telegram.WebApp;
         this._promise = new Promise((resolve) => this._promise_resolve = resolve);
     }
 
