@@ -6,7 +6,7 @@ import {ButtonStart} from '../ButtonStart/ButtonStart.js';
 import {FormPage} from '../FormPage/FormPage.js';
 import {ResultPage} from '../ResultPage/ResultPage.js';
 
-
+alert(2)
 export class Root extends Component {
     static _attributes = {
         ...super._attributes,
