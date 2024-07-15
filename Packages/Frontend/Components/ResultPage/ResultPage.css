@@ -10,13 +10,9 @@
     }
 
 
-    .button__back {
-        align-content: center;
+    .button {
         color: var(--Theme__button__foreground_light);
         cursor: pointer;
-        display: grid;
-        height: 50px;
-        justify-content: center;
 
         &:hover {
             color: var(--Theme__button__foreground);
@@ -25,6 +21,13 @@
         &:active {
             color: var(--Theme__button__foreground);
         }
+    }
+
+    .container {
+        align-items: center;
+        display: grid;
+        height: 100px;
+        justify-items: center;
     }
 
     .display {

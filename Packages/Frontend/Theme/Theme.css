@@ -42,7 +42,7 @@
     x-flickable {
         --Flickable__puck__margin_inner: 32px;
         box-sizing: border-box;
-        height: calc(100dvh - 50px);
+        height: calc(100dvh - 100px);
         padding: 5px;
         position: relative;
         width: 100dvw;
