@@ -93,16 +93,16 @@ export class Root extends Component {
 
     _init() {
         this._telegram = window.Telegram.WebApp;
-        console.log(
-            this._telegram.WebAppUser,
+        this.props__sync('verticalSwipes');
+
+        let user_data = [
             this._telegram.initDataUnsafe.user.id,
             this._telegram.initDataUnsafe.user.first_name,
             this._telegram.initDataUnsafe.user.last_name,
             this._telegram.initDataUnsafe.user.username,
             this._telegram.initDataUnsafe.user.language_code,
-            this._telegram.initDataUnsafe.user.is_premium,
-            this._telegram.platform
-        );
-        this.props__sync('verticalSwipes');
+            this._telegram.platform,
+        ];
+        this._rest.call('user_data__save', user_data);
     }
 }
