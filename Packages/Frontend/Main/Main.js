@@ -1,4 +1,4 @@
-import {Root} from '../Components/Root/Root.js';
+// import {Root} from '../Components/Root/Root.js';
 
 
 window.addEventListener('load',() => {
