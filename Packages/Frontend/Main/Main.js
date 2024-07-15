@@ -1,7 +1,15 @@
-let root = await import('../Components/Root/Root.js');
 // import '../Components/Root/Root.js';
 
 
 window.addEventListener('load',() => {
     window.Telegram.WebApp.expand();
 })
+
+let root;
+
+async function main() {
+    root = await import('../Components/Root/Root.js');
+    alert(root)
+}
+
+main();
