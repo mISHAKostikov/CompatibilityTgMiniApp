@@ -3,9 +3,9 @@ import {Root} from '../Components/Root/Root.js';
 
 window.addEventListener('load',() => {
     // window.Telegram.WebApp.expand();
-    location = location.origin + location.pathname
 })
 
+    location = location.origin + location.pathname
 // let root;
 // function a() {
 //     setTimeout(b, 1e4)
