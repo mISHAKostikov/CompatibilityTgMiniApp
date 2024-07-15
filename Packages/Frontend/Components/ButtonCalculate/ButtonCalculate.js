@@ -33,7 +33,7 @@ export class ButtonCalculate extends Component {
     }
     set animation(animation) {
         this.attribute__set('_animation', animation);
-        this._telegram.HapticFeedback.impactOccurred('soft');
+        if (animation) this._telegram.HapticFeedback.impactOccurred('soft');
     }
 
 

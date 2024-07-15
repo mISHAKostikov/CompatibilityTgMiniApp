@@ -33,7 +33,7 @@ export class ButtonStart extends Component {
     }
     set _animation(animation) {
         this._attribute__set('_animation', animation);
-        this._telegram.HapticFeedback.impactOccurred('medium');
+        if (animation) this._telegram.HapticFeedback.impactOccurred('medium');
     }
 
 
