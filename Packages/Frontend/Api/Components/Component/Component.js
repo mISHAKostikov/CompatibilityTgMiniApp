@@ -300,9 +300,7 @@ export class Component extends Class.mix(HTMLElement, EventManager) {
         for (let element of elements) {
             let resource_url = element.href || element.src;
 
-            console.log(resource_url, location.href)
-
-            if (!resource_url || resource_url == location.href) continue;
+            if (!resource_url || resource_url == (location.origin + location.pathname)) continue;
 
             let promise = new ExternalPromise();
             promises.push(promise);
