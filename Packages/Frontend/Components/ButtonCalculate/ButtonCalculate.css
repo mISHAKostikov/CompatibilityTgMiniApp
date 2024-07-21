@@ -4,7 +4,6 @@
 
 @layer init {
     :host {
-        cursor: pointer;
         width: fit-content;
     }
 

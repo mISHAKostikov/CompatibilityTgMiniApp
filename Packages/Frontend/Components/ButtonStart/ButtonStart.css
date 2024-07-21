@@ -21,13 +21,11 @@
         aspect-ratio: 1;
         border: 15px solid var(--Theme__block__background_accent);
         border-radius: 100%;
-        cursor: pointer;
         grid-area: 1 / 1;
         height: var(--Theme__diameter_circle);
     }
 
     .image {
-        cursor: pointer;
         grid-area: 1 / 1;
         width:  100px;
     }
