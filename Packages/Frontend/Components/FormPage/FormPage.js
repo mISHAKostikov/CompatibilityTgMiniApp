@@ -39,7 +39,7 @@ export class FormPage extends Component {
         let detail = [
             name_1,
             name_2,
-        ]
+        ];
 
         await this._elements.buttonCalculate._promise;
 
